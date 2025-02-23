@@ -1,7 +1,6 @@
 {
-  "name": "wxt-react-starter",
-  "description": "manifest.json description",
-  "private": true,
+  "name": "arc-for-chrome",
+  "description": "Bring my favorite Arc features to Chrome",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

@@ -6,10 +6,10 @@ function copyURL() {
   navigator.clipboard
     .writeText(url)
     .then(() => {
-      showNotification('URL已复制到剪贴板');
+      showNotification('URL copied to clipboard');
     })
     .catch((error) => {
-      showNotification('复制失败，请重试', 2000);
+      showNotification('Failed to copy, please try again', 2000);
     });
 }
 

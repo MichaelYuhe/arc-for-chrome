@@ -22,12 +22,10 @@ function ensureContainer() {
 export function showNotification(message: string, duration = 3000) {
   const container = ensureContainer();
 
-  // 如果已经有通知在显示，先移除它
   if (currentNotification) {
     container.removeChild(currentNotification);
   }
 
-  // 创建新的通知元素
   const notification = document.createElement('div');
   notification.style.cssText = `
     background: #4CAF50;
@@ -43,15 +41,12 @@ export function showNotification(message: string, duration = 3000) {
   container.appendChild(notification);
   currentNotification = notification;
 
-  // 淡出动画并移除元素
   setTimeout(() => {
     if (notification.parentElement) {
-      // 确保元素还在DOM中
       notification.style.opacity = '0';
       notification.style.transform = 'translateX(100%)';
       setTimeout(() => {
         if (notification.parentElement) {
-          // 再次确保元素还在DOM中
           container.removeChild(notification);
           if (currentNotification === notification) {
             currentNotification = null;
