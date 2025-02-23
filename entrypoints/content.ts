@@ -1,5 +1,5 @@
 import './contents/copyURL';
-
+import './contents/pop';
 export default defineContentScript({
   matches: ['<all_urls>'],
   main() {

@@ -3,7 +3,7 @@ type ShortcutKey = {
   ctrl?: boolean;
   shift?: boolean;
   alt?: boolean;
-  meta?: boolean; // Command key on Mac, Windows key on Windows
+  meta?: boolean;
   handler: () => void;
 };
 
